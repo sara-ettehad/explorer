@@ -1,4 +1,4 @@
-const Contacts =[
+const contacts =[
     {
         name: "Beyonce" ,
         img: "https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg",
@@ -17,4 +17,6 @@ const Contacts =[
         tel: "+918 372 574",
         email: "gmail@chucknorris.com",
     }
-]
+];
+
+export default contacts;
