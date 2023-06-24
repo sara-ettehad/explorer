@@ -3,30 +3,24 @@ import Card from "./Card";
 import contacts from "../contacts";
 import Avatar from "./Avatar";
 
-
+function createContact(contact){
+    return (
+        <Card 
+            id={contact.id}
+            key={contact.id}
+            name={contact.name}
+            img={contact.imgURL}
+            tel={contact.tel}
+            email={contact.email}
+        />
+    )
+}
 function App() {
     return (
         <div>
             <h1 className="heading">My Contacts</h1>
             <Avatar img="https://newprofilepic2.photo-cdn.net//assets/images/article/profile.jpg"/>
-            <Card
-                name={contacts[0].name}
-                img={contacts[0].imgURL}
-                tel={contacts[0].phone}
-                email={contacts[0].email}
-            />
-            <Card
-                name={contacts[1].name}
-                img={contacts[1].imgURL}
-                tel={contacts[1].phone}
-                email={contacts[1].email}
-            />
-            <Card
-                name={contacts[2].name}
-                img={contacts[2].imgURL}
-                tel={contacts[2].phone}
-                email={contacts[2].email}
-            />
+            {contacts.map(createContact)}
         </div>
     );
 }
